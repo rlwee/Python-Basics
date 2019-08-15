@@ -1,97 +1,105 @@
-def even(a):
-
-    if a%2 == 0:
+def even(test):
+    if test%2 == 0:
         even = "even"
         odd = "odd"
         return even
 
-print("2 is an", even(2), ' number')
+test = 2
+print(test,'is an',even(test), 'number')
 
 
+def greater_number(greater,less):
+    if greater > less:
+        msg = f"{greater} is greater than {less}"
+        return msg
+
+greater = 9
+less = 3
+print(greater_number(greater,less))
+
+def lesser_number(lesser,more):
+        if lesser < more:
+                msg = f"{lesser} is lesser than {more}"
+                return msg
+
+lesser = 3
+more = 9
+print(lesser_number(lesser,more))
 
 
-def greaterNumber(a,b):
+def huge_number(huge):
 
-    if a > b:
-        return "9 is greater than 3"
-        
-
-print(greaterNumber(9,3))
-
-def lesserNumber(a,b):
-
-    if a < b:
-        return "3 is less than 9"
-
-print(lesserNumber(3,9))
-
-
-def elsa(a,b):
-
-    if a > b:
-        return "Value a is greater than b"
+    if huge > 500:
+        msg_huge = f"{huge} is a huge number"
+        return msg_huge
     else:
-        return "Value b is greater than a"
+        msg_low = f"{huge} is not huge after all"
+        return msg_low
 
-print(elsa(3,9))
+huge = 1000
+print(huge_number(huge))
 
 
-def nested(a):
-
-    if a % 2 == 0:
-        if a < 100:
-            return "Value a is an even and a small number"
+def nested_identifying_number(number_value):
+    msg_identified =f"{number_value} is an even number and a small number"
+    if number_value % 2 == 0:
+        if number_value < 100:
+            return msg_identified
         else:
             return "Bye"
 
-print(nested(50))
+number_value = 50
+print(nested_identifying_number(number_value))
 
 
-def nesting(a):
+def convert_to_even(number_convert):
+    before_convert = number_convert
+    number_convert *= 2
+    msg_converted =f'{before_convert} is now {number_convert}.Any number multiplied by 2 will be even'
+    if number_convert %2 == 0:
+        return msg_converted
 
-    if a < 100:
-        a *= 2
-        if a == 100:
-            return "value a is 50 less than 100 then multiplied by 2 is 100"
-
-print(nesting(50))
-
-
-def elseIf(a):
-
-    if a == "comsci":
-        return "ez"
-    elif a == "IT":
-        return "ez pz"
+number_convert = 9
+print(convert_to_even(number_convert))
 
 
-print(elseIf("IT"))
+def elseIf_courses(course):
+    msg_cs=f'{course} is an ez course.'
+    msg_IT=f'{course} is an ez pz course.'
+    if course == "comsci":
+        return msg_cs
+    elif course == "IT":
+        return msg_IT
+
+course = 'comsci'
+print(elseIf_courses(course))
 
 
-def seniorCitizen(age):
-
+def senior_citizen(age):
+    msg_old =f'{age} is an old age! Please retire.'
+    msg_young =f'{age} is young.Keep working'
     if age >= 60:
-        return "Please retire"
+        return msg_old
     else:
-        return "Keep working"
+        return msg_young
 
-print(seniorCitizen(75))
+age = 70
+print(senior_citizen(age))
 
-def work(age, student):
+def work_eligibility(status):
+    if status == 'student':
+        return 'You are eligible for a part time job.'
+    if status == 'graduate':
+        return 'Please apply for a fulltime job.'
 
-    if age >= 18:
-        if student == "Student":
-            return "You are eligible for a part time job"
-    else:
-        return "you are not eligible to apply"
+status = 'graduate'
+print(work_eligibility(status))
 
-print(work(18, "Student"))
-
-def hardworker(a):
-
-    if a == "Yes":
+def hardworker(more):
+    if  == "yes":
         return "Unli durian!!!"
     else:
         return "No durian"
 
-print(hardworker("Yes"))
+more = 'yes'
+print(hardworker(more))
