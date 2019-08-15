@@ -1,51 +1,77 @@
 import math
 
-def add(a,b):
-    return a + b
+def addition(addI,addII):
+    return addI + addII
 
-print("3 plus 9 is: ", add(3,9))
+addI = 3
+addII = 9
+print(addI,'plus',addII,'is:',addition(addI,addII))
 
 
-def subtract(a,b):
-    return a - b
+def subtraction(subtractI,subtractII):
+    return subtractI - subtractII
 
-print("9 minus 3 is: ", subtract(9,3))
+subtractI = 9
+subtractII = 3
+print(subtractI,'minus',subtractII,'is:',subtraction(subtractI,subtractII))
 
-def multiplication(a,b):
-    return a*b
+def multiplication(multiplyI,multiplyII):
+    return multiplyI * multiplyII
 
-print("3 times 9 is: ", multiplication(3,9))
+multiplyI = 3
+multiplyII = 9
+print(multiplyI,'times',multiplyII,'is:', multiplication(multiplyI,multiplyII))
 
-def division(a,b):
-    return a/b
+def division(divideI,divideII):
+    return divideI/divideII
 
-print("9 divided by 3 is: ", int(division(9,3)))
+divideI = 9
+divideII = 3
+print(divideI,'divided by',divideII,'is:', division(divideI,divideII))
 
-def exponent(a,b):
-    return math.pow(a, b)
+def exponent(expI,expII):
+    return math.pow(expI,expII)
 
-print("3 to the power of 9 is: ", exponent(3,9))
+expI = 3
+expII = 9
+print(expI,' to the power of ',expII,' is: ', exponent(expI,expII))
 
-def modulus(a,b):
-    return a % b
-print("Remainder of 10 divided by 3 is: ", modulus(10,3))
 
-def anotherAdd(a,b):
-    a += b
-    return a
-print("4 plus 8 is: ", anotherAdd(4,8))
+def modulus(modulusI,modulusII):
+    return modulusI % modulusII
 
-def anotherSubtract(a,b):
-    a -= b
-    return a
-print("8 minus 4 is: ", anotherSubtract(8,4))
+modulusI = 10
+modulusII = 3
+print('Remainder of',modulusI,'divided by',modulusII,'is:',modulus(modulusI,modulusII))
 
-def anotherMultiplication(a,b):
-    a *= b
-    return a
-print("4 times is 8: ", anotherMultiplication(4,8))
+def another_addition(addIII,addIV):
+    addIII += addIV
+    return addIII
 
-def anotherDivision(a,b):
-    a /= b
-    return a
-print("8 divided by 4: ", anotherDivision(8,4))
+addIII = 4
+addIV = 8
+print(addIII,'plus',addIV,'is:',another_addition(addIII,addIV))
+
+def another_subtract(subtractIII,subtractIV):
+    subtractIII -= subtractIV
+    return subtractIII
+
+subtractIII = 8
+subtractIV = 4
+print(subtractIII,' minus ',subtractIV,' is: ', another_subtract(subtractIII,subtractIV))
+
+def another_multiplication(multiplyIII,multiplyIV):
+    multiplyIII *= multiplyIV
+    return multiplyIII
+
+multiplyIII = 4
+multiplyIV = 8
+print("4 times is 8: ", another_multiplication(multiplyIII,multiplyIV))
+
+def another_division(divideIII,divideIV):
+    divideIII /= divideIV
+    return divideIII
+
+divideIII = 8
+divideIV = 4
+print(divideIII,'divide by',divideIV,'is: ',another_division(divideIII,divideIV))
