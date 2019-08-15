@@ -1,112 +1,128 @@
-def displayNames():
-
-    Names = ["Russel", "Dom",
-             "Melch", "Ian"
-            ]
-
-    for index in Names:
-        print(index, end= " ")
-    print("\n")
-
-displayNames()
+def get_name_index(name, letter):
+    for index, lett in enumerate(name):
+        if lett == letter:
+            print(lett, ' found in ', index)
 
 
-def displayNumbers():
 
-    num = 0
-    while num != 10:
-        num += 1
-        print(num, end=" ")
-    print("\n")
+name = "russel"
+letter = "e"
+get_name_index(name, letter)
 
-displayNumbers()
 
-def letterWord():
+def count_letter_vowels(word,vowels):
+    count = 0
+    for letter in word:
+        for vow in vowels:
+            if letter == vow:
+                count += 1
+    if count == 1:
+        print('only ',count,' vowel in ', word)
+    elif count == 0:
+        print('No vowels in ', word)
+    else: print('There are ',count,' vowels in ', word)
 
-    for index in "Swift Kind":
+
+word= "swiftkind"
+vowels= "aeiou"
+count_letter_vowels(word,vowels)
+
+def count_letter_consonant(wordII,consonant):
+    count = 0 
+    for letter in wordII:
+        for cons in consonant:
+            if letter == cons:
+                count += 1
+    if count == 1:
+        print('only ',count,' consonant in ', wordII)
+    elif count == 0:
+        print('No consonants in ', wordII)
+    else: print('There are ',count,' consonants in ', wordII)
+
+wordII = "swiftgood"
+consonant = "bcdfghjklmnpqrstvwxyz"
+count_letter_consonant(wordII,consonant)
+
+
+def letter_by_letter(wordI):
+    for index in wordI:
         print(index, end=" ")
     print("\n")
 
-letterWord()
+wordI= "Swiftkind"
+letter_by_letter(wordI)
 
-def loopBreak():
 
-    Names = ["Russel", "Melch",
-             "Dom", "Mary"
-            ]
-    for index in Names:
+def loop_break(lists):
+    for index in lists:
         if index == "Dom":
             break
         print(index, end=" ")
+    print('\n')
 
-    print("\n")
+Names = ["Russel", "Melch",
+         "Dom", "Mary"
+        ]
+loop_break(Names)
 
-loopBreak()
 
 
-
-def loopContinue():
-
-    Names = ["Russel", "Melch",
-             "Dom", "Mary"
-            ]
-    for index in Names:
+def loop_continue(listII):
+    for index in listII:
         if index == "Dom":
             continue
         print(index, end=" ")
     print("\n")
 
-loopContinue() 
+NamesII = ["Russel", "Melch",
+           "Dom", "Ian"
+          ]
 
-def loopRange(a):
+loop_continue(NamesII) 
 
-    for index in range(a):
+
+
+def loop_range(numI):
+    for index in range(numI):
         print(index, end=" ")
     print("\n")
 
-loopRange(9)
+numI = 9
+loop_range(numI)
 
-def listNames():
-    Names = ["Russel", "Melch",
-             "Dom", "Mary"
-            ]
-    for index in Names:
+
+def list_show(listI):
+    for index in listI:
         print(index, end=" ")
-    else:
-        print("\nHonor students")
-
-listNames()
-
-def nestedLoop():
-    numbers = [[1,1,1], [2,2,2],[3,3,3]]
-
-    for index in numbers:
-        print("\n")
-
-        for each in index:
-             print(each, end = " ")
     print("\n")
-nestedLoop()
+
+listI = ["Russel", "Melch",
+    "Dom"]
+list_show(listI)
 
 
-def whileCount():
-    count = 0
-    while count < 5:
-        print(count, "is less than 5")
-        count += 1
+def while_count(valueI,countI):
+    while countI < valueI:
+        print(countI,"is less than ",valueI)
+        countI += 1
     else:
-        print(count, "is equal to 5")
+        print(countI,"is equal to ",valueI)
 
-whileCount()
+countI = 0
+valueI = 5
+while_count(valueI,countI)
 
+print('\n')
+def while_count_decrease(valueII,countII):
+    while countII > valueII:
+        countII -= 1
+        if countII > valueII:
+            print(countII,' is greater than ',valueII)
+        elif countII <valueII: 
+            print(countII,' is less than ',valueII)
+        if countII == valueII:
+            print(countII,' is equal to ',valueII)
 
-def whileCountless():
-    count = 5
-    while count >= 0:
-        if count == 5:
-            print(count, "is equal to 5")
-        count -= 1
-        print(count,"is less than 5")
-
-
-whileCountless()
+countII =5
+valueII =0
+while_count_decrease(valueII,countII)
