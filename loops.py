@@ -126,3 +126,13 @@ def while_count_decrease(valueII,countII):
 countII =5
 valueII =0
 while_count_decrease(valueII,countII)
+
+
+
+def show_lists(name):
+    for index in name:
+        print(index)
+
+
+name = ["russel","lacorte","wee"]
+show_lists(name)
